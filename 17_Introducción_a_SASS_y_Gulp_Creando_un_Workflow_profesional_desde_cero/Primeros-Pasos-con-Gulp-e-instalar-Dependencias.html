@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Primeros Pasos con Gulp e instalar Dependencias</title>
+</head>
+<body>
+  
+
+         <h1>Primeros Pasos con Gulp e instalar Dependencias</h1>
+
+         <div>
+             <ul>
+              <li> <b>npm init</b> (Esto creara un archico <b>package.json</b>es para poder instalar las dependencias)Con esto iniciamos el proyecto, nos aparecera algunos datos de nuestro proyecto que tenemos que completar</li>
+              <li><b> npm i --save-dev gulp</b> (creara una carpeta <b>(node_module)</b>y el archivo <b>package-lock.json</b> ) con esto estamos instalando las dependencias de gulp</li>
+              <li><b>gulp -v</b> con esto nos mostrara la version de nuestro gulp</li>
+              <li>despues creamos un archivo <b>gulpfile.js</b> en este archivo vamos a elaborar tareas de gulp</li>
+              <li><b>npm i</b> si eliminamos las dependencias con este comando podemos instalar de nuevo las dependencias</li>
+              <li><b>npm i --save-dev sass gulp-sass</b>con este comando vamos a instalar dependencias <b>sass, aqui va a instalar todo el concocimiento de sass(sabe que es una variables,su sintaxis)</b> y este de aca nos sirve para poderconectar gulpfile.js y app.scss<b>gulp-sass</b></li>
+              <li><b> npm i --save-dev autoprefixer gulp-postcss</b>Con estas dos dependencias podemos escribir codigo de ultima generacion css y nos va a crear versiones compatibles que no la soportan  </li>
+              <li><b> npm i --save-dev postcss</b>instarlar este comando tmb</li> <br> <br> <br>
+
+              <h2>LA FORMA DE DECIRLE A autoprefixer y gulp-postcss que navegadores queremos hacerlos compatibles los hacemos con el ARCHIVO package.json</h2>
+              <li>"browserslist": [ <br>
+                "last 1 version", (aca le decimos que haga compatible la ultima version de los navegadores)<br>
+                "> 1%" (aca le decimos que le dea soporte a todos los navegadores cuyo uso sea mayor a 1%)</li>
+              <br> <br> <br>
+              <h2>MULTIPLES TAREAS POR DEFAULT (usaremos series, watch si lo dejaremos al ultimo porque es el que detiene la ejecucion)</h2>
+              <li>series  -  Se inicia una tarea, y hasta que finaliza, inicia la siguiente</li>
+              <li> parallel - Todas incian al mismo tiempo</li>
+              <li><b>gulp</b>poniendo solo ese comando en la terminal hacemos todo</li>
+             </ul>
+        
+         </div>
+
+</body>
+</html>
