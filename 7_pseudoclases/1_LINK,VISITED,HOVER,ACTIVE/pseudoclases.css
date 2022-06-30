@@ -1,0 +1,38 @@
+/* PSEUDOCLASES
+sintaxis (:)
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.enlace{
+    display: block;
+    background: tomato;
+    color: aliceblue;
+    text-decoration: none;
+    padding: 20px;
+    border-bottom: 3px solid forestgreen;
+}
+
+.enlace:link{  /*link solo se utiliza para elemtnos a, selecciona alos enlaces no visitados*/
+  color: brown;
+  background: rgb(148, 135, 222);
+}
+
+.enlace:visited{ /*visited tmb solo se utiliza para elemntos a, selecciona a los elemntos ya visitados*/
+   background: crimson;
+}
+
+.enlace:hover{  /*seleciona al elemnto que estamos pasando el mouse*/
+   text-decoration: underline;
+   padding: 30px 15px;
+   transition: .9s;
+}
+
+.enlace:active{   /*selecciona al elemnto mientras estamos dando click sobre el elemento*/
+  background: rgba(8, 77, 104, 0.884);
+  color: rgb(255, 217, 0);
+}

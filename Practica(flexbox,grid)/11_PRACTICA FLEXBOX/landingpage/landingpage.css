@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Poppins:wght@300;400;500;700&family=Raleway:wght@300;400;700&display=swap');
+
+:root{
+    --height-nav:70px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #f2f2f2;
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;        /*todo contenido que se salga lo escondera*/
+}
+
+.nav{
+    background: rgb(37, 137, 177);
+    height: var(--height-nav);
+    color: bisque;
+}
+
+.nav_container{
+    height: 100%;
+    display: flex;   /*esto hara que los elementos se pongan uno al lado de otro*/
+    justify-content: space-between;   /*Esto mandara los elementos a las esquinas*/
+    align-items: center;    /*Esto centrara los elementos, y poniendo el height para que lo herede de su padre*/
+}
+
+.nav_link{
+    color: #f2f2f2;
+    text-decoration: none;
+    margin-left: 1em;        /*Este valor es para dar espacios entre los link del costado*/
+}
+
+.hero_main{
+    display: flex;
+    height: calc(100vh - var(--height-nav));  /*100vh es el 100% del alto del navegador menos el alto del menu de navegacion*/
+    align-items: center;  /*esto centrara verticalmente*/
+    min-height: 600px;   /*para que cuando pasemos a mobiles no baje de ese tamaño y no se rompa el diseño*/
+}
+
+
+.hero_text{
+    flex: 1;   /* reparte el espacio de manera equitativa*/
+}
+
+.hero_picture{
+    flex: 1 ;   /* reparte el espacio de manera equitativa*/
+}    
+
+.hero_img{
+    width: 100%;   /*le damos este widht para que se adapte asu padre que es el hero_picture y de esa manera tendra el mismo tamaño que el texto*/
+    max-width: 450px;  /*esto indica el ancho maximo*/
+    display: block;  /*para que la podemos centar atraves del flex-item o del elemnto hero_picture*/
+    margin: 0 auto; 
+}
+
+.hero_title{
+    font-size: 3rem; /*tamaño del titulo*/
+}
+
+.hero_paragraph{
+    font-size: 1.5rem;   /*tamaño del parrafo*/
+    font-weight: 300;     /*grosor del parrafo*/
+}
+
+.cta{
+    background: #6c63ff;
+    display: inline-block;   /*para que tenga las propiedades de un elemnto bloque pero siendo en linea*/
+    padding: 15px 30px;     /*tamaño del boton*/
+    margin-top: 1.5rem;  /*este da el espacio entre el texto y el boton*/
+    color: #f2f2f2;
+    text-decoration: none;
+    border-radius: 10px;     /*borde para el boton*/
+}
+
+/*ADAPTAR A DISPOSITIVOS MOBILES*/
+@media screen and (max-width:900px) {   /*esto quiere decir que cuando un dispositivo mobil tenga menos de 900px su height que es el menu sera de 100px*/
+    :root{
+        --height-nav:100px;
+    }
+
+    .nav_container{  /*esto es el menu de navegacion*/
+        flex-direction: column;
+        justify-content: space-evenly;  /*el j-content es para el flex direction*/
+    }
+
+   .hero_main{
+       flex-direction: column;   /*Esto deja al texto encima de la imagen*/
+       padding:40px 0 ;         /*esto es el espacio de arriba y abajo en la imagen*/
+   } 
+
+   .hero_picture{
+       order: -1;          /*De esta manera la imagen se subira encima del texto*/
+   }
+
+   .hero_img{
+       max-width: 380px;  /*De esta manera el tamaño maximo de la imagen sera 380px*/
+   }
+    
+   .hero_texts{ /*sera un flex-item y a la vez un flex-container y todo esto para centrar el contenido*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+   }
+
+   .hero_title{
+       font-size: 2.5rem ;
+   }
+
+   .hero_paragraph{
+       font-size: 1rem;
+   }
+}

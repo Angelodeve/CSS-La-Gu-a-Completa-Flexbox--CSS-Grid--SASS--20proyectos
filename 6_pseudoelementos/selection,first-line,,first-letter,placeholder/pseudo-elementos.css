@@ -1,0 +1,82 @@
+/*pseudo-elementos
+Un pseudoelemento CSS es una palabra clave añadida a un selector que le permite 
+diseñar una parte específica de los elementos seleccionados. Por ejemplo, ::first-linese
+puede utilizar para cambiar la fuente de la primera línea de un párrafo.*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background: salmon;
+    font-family: 'Arial';
+}
+
+
+.card{
+    width: 300px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: -20px -20px 0px 0px #9efb8b;
+    border-radius: 10px;
+}
+
+
+.card_title{
+    border-bottom: 3px solid rgb(150, 114, 250);
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+}
+
+
+/*::selección
+El pseudoelemento::selection CSS aplica estilos a la parte de un documento que
+ha sido resaltada por el usuario (como hacer clic y arrastrar el mouse sobre el texto).*/
+
+p::selection{
+    background: silver;
+    color: #9efb8b;
+}
+
+
+/*::first-line
+aplica estilos a la primera línea de un elemento a nivel de bloque*/
+
+p::first-line{
+    color: crimson;
+}
+
+
+/*::first-letter
+aplica estilos a la primera letra de la primera línea de un elemento de nivel de bloque ,
+ pero solo cuando no está precedido por otro contenido (como imágenes o tablas en línea).*/
+
+.card_title::first-letter{
+    color: aqua;
+}
+
+
+/*::placeholder
+representa el texto de marcador de posición en un elemento o .::placeholder
+<input><textarea>*/
+
+input[type="text"]{
+    margin-left: 20px;
+    padding: 15px 3px;
+    background: #9efb8b;
+    color: rgb(255, 22, 228);
+    border: none;
+    border-bottom: 4px solid #fff;
+    outline: none;
+}
+
+
+
+input[type="text"]::placeholder{
+    color: blue;
+}

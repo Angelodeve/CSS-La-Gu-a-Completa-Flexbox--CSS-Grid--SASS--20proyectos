@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COLUMNAS EN CSS GRID</title>
+    <link rel="stylesheet" href="columnasgrid.css" />
+  </head>
+  <body>
+    <div class="grid">
+      <div class="grid_item">1</div>
+      <div class="grid_item">2</div>
+      <div class="grid_item">3</div>
+      <div class="grid_item">4</div>
+      <div class="grid_item">5</div>
+      <div class="grid_item">6</div>
+    </div>
+
+    <h3>grid-template-columns</h3>
+    <p>
+      Define las columnas de un contenedor de rejilla . Puede especificar el
+      ancho de una columna usando una palabra clave (como auto) o una longitud
+      (como 10px). El número de columnas está determinado por el número de
+      valores definidos en la lista separada por espacios.
+      <br />
+      <br />
+      ACEPTA CUALQUIER TIPO DE UNIDAD DE MEDIDA: CM,%,PX,REM,FR
+    </p>
+    <br />
+    <p>
+      grid-template-columns: repeat( 6, 16% ); /Se usa repeat para formar varias
+      columnas (el primer valor es la cantidad de columnas, el segundo valor es
+      el tamaño de las columnas)
+      <br />
+      <br />
+      <br />
+      Tambien se puede usar el repeat con 3 valores (el primer valor es la
+      cantidad de columnas, el segundo y el tercer valor es el tamaño de las
+      columnas) en este caso el resultado seria de forma intercalada
+      <br />
+      <br />
+      EJEMPLO:
+      <br />
+      grid-template-columns: repeat( 3, 16% 1fr) DE ESTA FORMA EL RESULTADO
+      SERIA INTERCALADO, 3 COLUMNAS DE 16% Y 3 COLUMNAS DE 1FR
+      <br />
+      <br />
+      Tambien hay una unidad de llamada FR
+      <br />
+      y sirve para dividir el espacio disponible en fracciones
+    </p>
+    <img src="gridcolumns.png" alt="grid-template-columns" width="1000" />
+  </body>
+</html>

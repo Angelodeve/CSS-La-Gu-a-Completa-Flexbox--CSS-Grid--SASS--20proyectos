@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background: salmon;
+    font-family: 'Arial';
+}
+
+
+.card{
+    width: 300px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: -20px -20px 0px 0px #9efb8b;
+    border-radius: 10px;
+}
+
+
+.card_title{
+    border-bottom: 3px solid rgb(150, 114, 250);
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+}
+
+
+/*::before (antes)
+sirve para agregar un elemento antes del contenido
+*/
+
+.card_text::before{
+    content: "Hola ";
+    color: cornflowerblue;
+}
+
+
+/*::after (despues)
+sirve para agregar un elemento despues del contenido
+*/
+
+.card_text::after{
+    content: " Angelo";
+    color: crimson;
+}

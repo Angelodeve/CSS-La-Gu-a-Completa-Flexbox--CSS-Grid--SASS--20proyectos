@@ -1,0 +1,42 @@
+/* :TARGET
+representa un elemento único (el elemento objetivo) con un id 
+que coincide con el fragmento de la URL.*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.event{
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 20px;
+    background: crimson;
+    color: aliceblue;
+    text-decoration: none;
+    padding: 20px;
+    
+}
+
+.event:active{
+    padding: 23px;
+}
+
+#OBJETIVO{
+    transition: .3s;
+    
+}
+
+#OBJETIVO1:target{
+    color: rgb(250, 108, 7);
+}
+
+#OBJETIVO2:target {
+    background-color: gold;
+  }
+  
+#Inicio:target{
+    background: violet;
+}
+   

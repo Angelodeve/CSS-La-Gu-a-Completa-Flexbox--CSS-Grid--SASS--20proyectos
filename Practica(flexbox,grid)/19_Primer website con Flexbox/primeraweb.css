@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Lato:ital,wght@0,400;0,700;1,300&family=Poppins:wght@300;400;500;700&family=Raleway:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+
+/**{
+     outline: 3px solid rgb(221, 32, 32); es un contorno que no agrega espacio extra, Y TMB SIRVE PARA VER COMO ESTAMOS MAQUETANDO, PARA VER LOS LEMENTOS EN EL NAVEGADOR
+}*/
+
+
+:root{
+    --padding-container:80px 0;
+    --color-primary:#f77062;
+    --color-secundary:#4731b6;
+    --color-bg:#fafafa;
+    --align-title:center;
+    --box-shadow: 0 0 22px rgba(187, 16, 16, 0.2);
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+.container{
+    width: 90%;           /*para que no sobrepase ese 90% del contenido*/
+    max-width: 1200px;    /*para que no sobrepase los 1200px*/
+    overflow: hidden;     /*todo lo que salga se va a esconder*/
+    margin: 0 auto;      /*de esta forma centramos el container*/
+    padding: var(--padding-container);
+/*border:3px solid red;*/
+}
+
+
+.hero{
+    --padding-container: 0;  /*aqui estamos modificando nuestra variable para que nuestro header tenga un padding de cero en todos los lados*/
+    height: 100vh;           /*para que ocupe el 100% del height de la pag */
+    background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+}
+
+.hero_main{         /*ES NUESTRO HEADER LA 1 PARTE DE LA PG*/
+    height: 100%;   /*es decir el 100% de su padre que es 100vh en la clase hero*/
+    display: flex;
+    justify-content: space-between; /*Para que se peguen alos lados*/
+    align-items: center;  /*con esto centramos */
+    flex-wrap: wrap-reverse;  /*como la imagenen no entra en el flex container por eso se pone wrap-reverse  */
+}
+
+.hero_img{         /*ESTO ES EL CONTAINER DE LA IMAGEN DE LA 1ERA PG*/
+    width: 45%;
+    text-align: center; /*con esto centramos la img*/
+    margin: 0;         /*le damos este margin para que se pegue al costado de pg esto podremos ver con outline*/
+}
+
+.hero_picture{     /*ESTA ES LA IMAGEN DE LA 1ERA PG*/
+    max-width: 80%;
+}
+
+.hero_texts{      /*ESTO ES EL CONTENEDOR DEL TEXTO DE LA 1ERA PG*/
+    width: 45%;
+    color: #fff;
+}
+
+.hero_title{     /*ESTO ES EL TITULO DE LA 1ERA PG*/
+    font-size: 4rem;  /*tamaño de las palabras del titulo*/
+}
+
+.hero_copy{      /*ESTO ES EL PARRAFO DE LA 1ERA PG */
+    font-size: 1.5rem;  /*tamaño de las palabras del parrafo*/
+    font-weight: 300;   /*grosor de las palabras del parrafo*/
+}
+/*AQUI TERMINA LA SECCION DEL HEADER*/
+
+
+
+/*SECCION DE ABOUT*/
+/* About section */
+
+.title{        /*ESTO ES EL TITULO */
+    font-size: 2.5rem;  /*tamaño del titulo*/
+    margin: 0;
+    margin-bottom: 40px;  /*el espacio hacia abajo del titulo*/
+    color: var(--color-primary);  /*color del titulo*/
+    text-align: var(--align-title); /*con esto centramos el titulo*/
+}
+
+.about{       /*ESTO ES EL ABOUT CONTAINER*/
+    display: flex;
+    justify-content: space-between;   /*en el video puso evenly*/
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+.about__img{      /*CONTAINER  DE LA IMG*/
+    width: 45%;   /*tamaño de la img*/
+    text-align: center; /*Para centrar la img*/
+    margin: 0;
+}
+
+.about__picture{  /*LA IMG*/
+    max-width: 80%;    /*Este sera el maximo tamaño de la img*/
+}
+
+.about__texts{   /*CONTAINER DE LOS TEXTOS Y BOTON*/
+    width: 50%;  /*Tamaño del container de los textos*/
+    --align-title:left; /*Con esto movemos los textos y boton del lado izquierdo*/
+}
+
+.about__paragraph{      /*ESTO SON LOS PARRAFOS*/
+    line-height: 1.5;   /*Esto es el espacio entre las lineas de textos*/
+}
+
+.about__cta{             /*ESTO ES EL BOTON*/
+    display: inline-block;  
+    margin-top: 20px;          /*Esto es del boton el espacio hacia arriba*/
+    background: var(--color-primary); /*color de fondo del boton*/
+    padding: 20px 40px;    /*Tamaño del boton*/
+    border-radius: 30px;   /*Tamaño del borde*/
+    color: #fff;         /*Color del texto dentro del boton*/
+    text-decoration: none;  
+}
+
+/*AQUI TERMINMA LA SECCION DE ABOUT*/
+
+
+
+
+/* LA SECCION DE PORTAFOLIO */
+
+.portfolio{       /*CONTAINER DEL PORTAFOLIO*/
+    background: var(--color-bg);  /*color de fondo de la seccion PORTAFOLIO*/
+}
+
+.portfolio__cards{   /*CONTAINER DE LAS CARDS*/
+    display: flex;
+    padding: 40px 0;    /*ESPACIO DE ARRIBA, DE LAS CARDS HACIA EL TITULO*/
+    justify-content: space-evenly; /*propiedad para distribuir elementos flexibles de tal manera que los elementos tengan el mismo espacio a su alrededor.*/
+    flex-wrap: wrap;   /*Especifica que los artículos flexibles se envolverán si es necesario*/
+}
+
+.portfolio__card{   /*LAS CARDS*/
+    width: 27%;     /*TAMAÑO DE LAS CARDS*/
+    background: #fff; /*COLOR DE FONDO DE LAS CARDS*/
+    height: auto;  /*Esto no es necesario ya que por defecto se sabe que es ese valor, pero igual lo ponemoos*/
+    box-shadow: var(--box-shadow); /*color de las sombras de las cards*/
+    border-radius: 10px;  /*TAMAÑO DE BORDES DE LA CARDS*/
+}
+
+.portfolio__picture{    /*LAS IMAGENES DE LAS CARDS*/
+    width: 100%;        /*TAMAÑO DE LAS IMAGENES*/
+    display: block;
+    border-radius: 10px 10px 0 0;  /*BORDE DE LAS IMAGENES DENTRO DE LAS CARDS*/
+    height: 200px;        /*EL LARGO DE LAS IMAGENES DENTRO DE LAS CARDS*/
+    object-fit: cover;
+}
+
+.portfolio__texts{    /*CONTAINER DE LOS TEXTOS DENTRO DE LAS CARDS*/
+    padding: 30px 20px 40px; 
+}
+
+.portfolio__title{      /*ESTOS SON LOS TITULOS DE LAS CARDS*/
+    font-size: 1.5rem;  /*TAMAÑO DEL TITULO*/
+    text-align: center;  /*CENTRAMOS EL TITULO*/
+    color: rgb(13, 71, 20);  /*COLOR DEL TITULO*/
+    margin: 0;
+}
+
+.portfolio__paragraph{  /*LOS PARRAFOS DE LOS TEXTOS*/
+    font-weight: 300;
+    margin: 30px 0;
+}
+
+.portfolio__cta{    /*LOS BOTONES*/
+    display: block;
+    background: rgba(15, 58, 15, 0.675);
+    padding: 15px 0;
+    border-radius: 30px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+    text-decoration: none;
+}
+/*AQUI TERMINMA LA SECCION DE PORTAFOLIO*/
+
+
+
+
+/* SECCION COPY */
+
+.copy{
+    background: var(--color-primary);
+}
+
+
+.title--margin{
+    margin: 0;
+    --color-primary:#fff;
+}
+/*AQUI TERMINMA LA SECCION DE COPY*/
+
+
+
+
+
+
+/* Gallery section */
+
+.gallery__container{    /*CONTAINER DE LA GALERIA*/
+    padding: 20px 0;   /*ESPACIO DE ARRIBA Y ABAJO DE  20PX Y A LOS COSTADOS DE 0*/
+    display: flex;
+    flex-wrap: wrap;    /*Especifica que los artículos flexibles se envolverán si es necesario*/
+    justify-content: space-around;  /*PARA Q SE DIVIDAN HORIZONTALMENTE*/
+}
+
+.gallery__picture{
+    width: 30%;       /*EL ANCHO DE LAS IMAGENES*/
+    height: 250px;     /*EL LARGO DE LAS IMAGENES*/
+    margin-bottom: 20px;  /*ESTO ES EL ESPACIO DE ABAJO DE LAS IMGS*/
+    display: block;
+    border-radius: 15px;   /*BORDE DE LAS FOTOS*/
+    object-fit: cover;
+    box-shadow: var(--box-shadow);  /*LOS FONDOS Y SUS COLORES DE LAS IMGS*/
+}
+/*AQUI TERMINMA LA SECCION DE GALLERY SECTION*/
+
+
+
+
+/* LANGUAGES SECTION */
+
+.languages{
+    background: var(--color-bg); /*COLOR DE FONDO */
+}
+
+.languages__container{
+    display: flex;
+    justify-content: space-evenly; /*PARA QUE  REPARTA EL ESPACIO DE FORMA EQUITATIVA*/
+    flex-wrap: wrap;     /*Especifica que los artículos flexibles se envolverán si es necesario*/
+}
+
+.languages__picture{
+    width: 20%;           /*ANCHO DE LAS IMGS*/
+    height: 100px;        /*LARGO DE LAS IMGS*/
+}
+/*AQUI TERMINMA LA SECCION DE LANGUAGES SECTION*/
+
+
+
+
+
+/* FOOTER SECTION */
+
+.footer{
+    background: var(--color-primary); /*COLOR DE FONDO*/
+    color: #fff;
+    text-align: center; /*PARA CENTRAR TOODS LOS ELEMNTOS*/
+}
+
+.footer__container{
+    --color-primary: #fff;
+    display: flex;
+    justify-content: space-between; /*PARA QUE PONGA LOS ELEMNTOS EN LAS ESQUINAS*/
+    align-items: center; /*PARA CENTRAR VERTICALMENTE LOS ELEMNTOS*/
+}
+
+.footer__texts{
+    width: 50%;
+}
+
+.footer__icon{  /*ICONOS DE FB TWITER E INSTAGRAM*/
+    display: inline-block;
+    font-size: 2rem;  /*TAMAÑO DE LOS ICONOS*/
+    margin: 0 30px;   /*EL ESPACIO ENTRE LOS COSTADOS DE LOS ICONOS */
+    text-decoration: none; /*CON ESTO LE QUITA LA RAYA A LOS ICONOS*/
+    color: #fff;  /*COLOR DE LOS ICONOS*/
+    margin-bottom: 30px; /*ESOACIO DE BAJO DE LOS ICONOS*/
+    width: 60px; /*ANCHO DEL ICONO*/
+    height: 60px; /*LARGO DEL ICONO*/
+    border: 1px solid ; /*BORDE LOS ICONOS*/
+    border-radius: 50%; /*LA CANTIDAD DE BORDE EN ESTE CASO SERA UN CIRCULO */
+    
+}
+
+.footer__icon.fab{    /*ESTO ES LA CLASE DE TOODS LOS ICONOS*/
+    line-height: 60px;  /*CON ESTO CENTRAMOS LOS ICONOS CON EL MARGEN Q ES UN CIRCULO*/
+}
+
+.footer__icon:hover{   /*CUANDO PASAMOS EL MOUSE POR EL ICONO SE DARA LOS SIUGUIENTE VALORES*/
+    background: #fff;
+    color: #62f79b;
+    cursor: pointer;  /*CON ESTO SE VE LA MANITA*/
+}
+
+.footer__link{  /*ESTO SON LOS LINKS*/
+    display: inline-block;
+    color: #fff;
+    margin: 0 20px;  /*ESTO ES EL ESPACIO ENTRE LOS LINKS*/
+    margin-bottom: 15px; /*ESTE ES EL ESPACIO DE ABAJO DE LOS LINKS*/
+}
+
+.footer__link:hover{  /*CUANDO PASAMOS EL MOUSE POR LOS LINKS SE DARA LOS SIUGUIENTE VALORES*/
+    text-decoration: none; /*CON ESTO DESAPARECERA LA RAYITA CUANDO LE PASEMOS EL MOUSE POR ENCIMA*/
+}
+
+.footer__img{     /*ESTO ES EL CONTAINER DE LA IMG*/
+    margin: 0;
+    width: 35%;  /*TAMAÑO DEL CONTAINER DE LA IMG*/
+}
+
+.footer__picture{  /*LA IMG*/
+    width: 90%;      /*TAMAÑO DE LA IMG*/
+}
+
+
+/*RESPONSIVE DESING*/
+@media screen and (max-width: 800px){
+    .hero{
+        height: auto;
+        min-height: 100vh;  /*ANCHO MINIMO*/
+        --padding-container: 80px 0; /*ESTO ES EL ESPACIO DE ARRIBA DEL TITULO*/
+    }
+    
+
+    .hero_main{  /*CONTAINER DEL TEXTO E IMAGENES*/
+        justify-content: center;
+    }
+
+
+    .hero_img{   /*CONTAINER DE LA IMG*/
+        width: 80%; 
+        margin-bottom: 30px;
+    }
+
+
+
+    .hero_picture{  /*LA IMAGEN*/
+        max-width: 85%;
+    }
+
+
+
+    .hero_texts{  /*CONTAINER DEL TITULO Y TEXTO*/
+        width: 50%;
+    }
+
+
+    .hero_title{  /*SECCION DEL TITULO*/
+        font-size: 3.5rem;  /*TAMAÑO DEL TITULO*/
+    }
+
+
+    /*SECTION ABOUT*/
+
+    .about__texts{  /*ESTO ES EL CONTEINER DEL TITULO Y PARRAFOS , BOTOM*/
+       width: 90%;
+       text-align: center;
+       margin: 0 auto;
+       margin-bottom: 80px;
+       --align-title:center
+    }
+
+
+    .about__paragraph{  /*ESTO SON LOS PARRAFOS*/
+        text-align: left;
+    }
+
+    
+    .about__img{ /*CONTAINER DE LA IMG*/
+        width: 100%;
+    }
+
+
+    /* LA SECCION DE PORTAFOLIO */
+
+    .portfolio__card{
+        width: 45%;
+        margin-bottom: 30px;
+    }
+
+
+    /*Gallery section */
+    .gallery__picture{
+        width: 45%;
+    }
+
+    /*SECTION LANGUAGES*/
+    .languages__container{
+        justify-content: space-between;
+    }
+
+    /*FOOTER*/
+    .footer__container{
+        flex-direction: column;
+    }
+
+    .footer__img{
+        order: -1;
+        width: 45%;
+        margin-bottom: 30px;
+    }
+
+    .footer__picture{
+        width: 100%;
+    }
+
+    .footer__texts{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:550px) {
+    /*SECTION HERO*/
+    .hero_img{
+        width: 85%;
+    }
+
+    .hero_picture{
+        max-width: 100%;
+    }
+
+    .hero_title{
+        font-size: 2.8rem;
+    }
+
+    /*SECTION ABOUT*/
+    .about__texts{
+        width: 100%;
+    }
+
+    /*SECTION PORTFOLIO*/
+    .portfolio__card{
+        width: 90%;
+        max-width: 300px;
+    }
+    
+    /*SECTION GALLERY*/
+    .gallery__picture{
+        width: 90%;
+        max-width: 300px;
+    }
+
+    /*SECTION LANGUAGES*/
+    .languages__container{
+        justify-content: space-around;
+    }
+
+    .languages__picture{
+        width: 35%;
+        margin-bottom: 30px;
+    }
+
+    /*FOOTER*/
+    .footer__img{
+        width: 90%;
+        max-width: 350px;
+        margin-bottom: 40px;
+    }
+
+
+}

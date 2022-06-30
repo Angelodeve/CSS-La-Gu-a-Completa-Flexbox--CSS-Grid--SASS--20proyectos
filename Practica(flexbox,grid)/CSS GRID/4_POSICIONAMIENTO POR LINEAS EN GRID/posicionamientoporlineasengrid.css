@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid {
+  max-width: 600px;
+  width: 90%;
+  height: 400px;
+  margin: 20px auto;
+  outline: 3px solid black;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  /*Se usa repeat para formar varias columnas (el primer valor es la cantidad de columnas, el segundo valor es el tamaño de las columnas) */
+  grid-template-rows: repeat(3, auto);
+}
+
+.grid_item {
+  color: aliceblue;
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.grid :nth-child(1) {
+  background: rgb(255, 221, 0);
+  grid-column-start: 3;
+  grid-column-end: 4;
+
+  grid-row-end: 2;
+  grid-row-end: 4;
+}
+
+.grid :nth-child(2) {
+  background: darkmagenta;
+}
+
+.grid :nth-child(3) {
+  background: steelblue;
+}
+
+.grid :nth-child(4) {
+  background: brown;
+}
+
+.grid :nth-child(5) {
+  background: chocolate;
+}
+
+.grid :nth-child(6) {
+  background: mediumblue;
+}
+
+.grid_column_rows {
+  display: flex;
+  border: 2px solid green;
+  background: rgba(255, 127, 80, 0.59);
+}
+
+.grid_column,
+.grid_rows {
+  border: 2px solid blue;
+  margin: 0 auto;
+}

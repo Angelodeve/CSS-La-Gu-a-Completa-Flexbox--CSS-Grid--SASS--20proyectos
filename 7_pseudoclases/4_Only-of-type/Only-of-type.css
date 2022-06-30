@@ -1,0 +1,139 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.box{
+  
+    background: steelblue;
+    width: 55px;
+    height: 55px;
+    margin: 10px 0;
+    margin-left: 5px;
+    text-align: center;
+    line-height: 55px;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+.container{
+    margin-left: -5px;
+    padding: 10px 0;
+    border: 3px solid lightcoral;
+}
+
+
+/*:only-of-type
+representa un elemento que no tiene hermanos del mismo tipo.
+
+div:only-of-type{
+background: tomato;
+}*/
+
+/*:first-of-type
+La pseudo-clase :first-of-type de CSS representa el primer elemento 
+de su tipo entre un grupo de elementos hermanos.
+
+.box:first-of-type{
+    background: yellow;
+}*/
+
+
+/*:last-of-type
+La pseudo-class :last-of-type de CSS representa el último elemento
+ de su tipo entre un grupo de elementos hermanos.
+
+ .box:last-of-type{
+     background: forestgreen;
+ }*/
+
+
+ /*:nth-of-type
+La pseudo-clase :nth-of-type() de CSS selecciona uno o más elementos
+de un tipo dado, en función de su posición entre un grupo de hermanos.
+ 
+                (odd) va a selecionar a los elementos impares
+                (even) va a seleccionar a los elementos pares
+                (n) selecciona a todos los elementos
+ .box:nth-of-type(2){
+     background: rebeccapurple;
+ }*/
+
+
+
+ /*:nth-last-of-type()
+La pseudo-clase :nth-last-of-type() CSS coincide con uno o más elementos
+ de un tipo dado, en función de su posición entre un grupo de hermanos,
+  contando desde el final.
+ 
+
+ .box:nth-last-of-type(odd){
+     background: aqua
+ }*/
+
+
+ /*:only-child
+La pseudo-clase (en-US) :only-child de CSS representa un elemento
+ sin hermanos. Esto es lo mismo que :first-child:last-child o 
+ :nth-child(1):nth-last-child(1), pero con una especificidad menor.
+ 
+ .box:only-child{
+     background: lawngreen;
+ }*/
+
+
+ /*:first-child
+La pseudo-clase :first-child de CSS representa el primer elemento 
+entre un grupo de elementos hermanos.
+ 
+
+ div:first-child{
+     background: tomato;
+ }*/
+
+
+
+ /*:last-child
+La pseudo-clase :last-child de CSS representa el último elemento
+entre un grupo de elementos hermanos.
+ 
+
+ div:last-child{
+     background: chartreuse;
+ }*/
+
+
+ /*:nth-child
+La pseudo-clase :nth-child() de CSS coincide con uno o más elementos
+ en función de su posición entre un grupo de hermanos.
+
+ div:nth-child(4){
+     background: peru;
+ }
+ 
+ .container :nth-child(1){
+     background: crimson;
+ }
+
+ body :nth-child(1){
+     background: crimson;
+ }
+ */
+
+
+ /*:nth-last-child
+La pseudo-clase :nth-last-child() de CSS selecciona uno o más elementos
+ en función de su posición entre un grupo de hermanos, contando desde 
+ el final.*/
+
+ .container :nth-last-child(1){
+     background: crimson;
+ }

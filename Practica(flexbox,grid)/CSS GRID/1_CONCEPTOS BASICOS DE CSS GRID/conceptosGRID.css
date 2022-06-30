@@ -1,0 +1,70 @@
+/*¿Qué es CSS GRID?
+CSS Grid Layout (Sistema de cuadrículas) es el sistema de
+diseño más poderoso disponible en CSS. Esto gracias a su
+sistema bidimensional, lo que significa que puede manejar
+tanto columnas como filas, a diferencia de flexbox, que es en
+gran medida un sistema unidimensional
+
+
+Filas y Columnas
+Debido a que CSS Grid, trabaja con
+un sistema bidimensional, se
+usarán filas y columnas, las filas
+(rows) son horizontales, las
+columnas (columns) verticales. Un
+ejemplo es una hoja de cálculo en
+Excel
+
+
+
+Grid container
+De la misma manera que en
+flexbox, para poder utilizar css grid,
+necesitamos un contenedor, a este
+contenedor se le denominará
+grid-containe
+
+
+
+Grid Item
+Teniendo creado un grid-container,
+es muy importantes saber, que los
+hijos directos del grid-container se
+les conoce como Grid-items
+
+
+
+Grid Cell (Celda)
+Para empezar a entender GRID,
+debes de verlo como una
+cuadrícula, compuesta de muchas
+celdas, al principio los grid-items
+ocuparán una celda por cada
+grid-item
+
+
+Grid Lines (Líneas)
+CSS GRID, trabaja en forma de una
+cuadrícula (grid), las cuadrícula
+están compuestas de líneas, líneas
+verticales y líneas horizontales
+(column grid lines, row grid lines) 
+
+
+
+Grid tracks
+Se le conoce Grid track, al espacio
+entre dos grid lines adyacentes,
+también se les conoce como filas y
+columnas.
+
+
+
+Grid area
+Es el espacio entre cuatro grid
+lines, un grid area puede estar
+formado por el número que sea de
+celdas, pero un grid area siempre
+debe ser rectangular o cuadrado
+
+*/

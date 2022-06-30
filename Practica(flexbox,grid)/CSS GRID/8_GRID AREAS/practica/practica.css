@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid {
+  height: 100vh;
+  outline: 3px solid #000;
+  margin: 10px auto;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas: /*cada nombre aqui es una columna*/
+    "header header header header header" /*y por cada comilla es una fila*/
+    "main main main main sidebar" /*se pone un punto para no poner nd y haci no se rompa las areas*/
+    "main main main main sidebar "
+    "main main main main sidebar "
+    "footer footer footer footer footer";
+}
+
+.grid_item {
+  font-size: 2rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  background: crimson;
+  grid-area: header;
+}
+
+.main {
+  background: steelblue;
+  grid-area: main;
+}
+
+.sidebar {
+  background: blueviolet;
+  grid-area: sidebar;
+}
+
+.footer {
+  background: darkgoldenrod;
+  grid-area: footer;
+}
+
+@media screen and (max-width: 800px) {
+  .grid {
+    grid-template-areas:
+      "header header header header header"
+      "main main main main sidebar"
+      "main main main main sidebar "
+      "main main main main sidebar "
+      "footer footer footer footer footer";
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "header"
+      "main"
+      "sidebar "
+      "footer";
+  }
+}

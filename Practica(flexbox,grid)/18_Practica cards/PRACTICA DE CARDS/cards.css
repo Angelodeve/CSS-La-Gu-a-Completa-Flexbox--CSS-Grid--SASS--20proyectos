@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2? family= Inter:wght@300;400;500;700 & family= Poppins:wght@300;400;500;700 & family= Raleway:wght@300;400;700 & family= Roboto:wght@300;400;500;700 & display=swap');
+
+:root{
+    --color-price: #26293A;
+    --color-features:#9c9191;
+    --color-boton:#fff;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.card{
+    width: 100%;        /*esto indica que ocupara el 100% del ancho de la pagina*/
+    min-height: 100vh;  /*esto es el alto minimo, para poder usar flexbox en sus dos ejes*/
+    display: flex;      /*con esto podremos tener a las cards de forma horizontal, pero ocupa el 100% del contenedor pero eso pasa por el align-items o eje secundario es por ello que ponemos el siguiente elemnto*/
+    align-items: center; /*con esto centra a nuestras cards*/
+    justify-content: space-evenly; /*con esto el eje horizontal nos separe a las cards de forma proporcionalmente*/
+    background-image: linear-gradient(360deg, var(--color-price)50%, #fff 50%); /*LINEAR-GRADIENT(360deg indica en que posicion va el color,en este caso abajo) (var(--color-price)50%, el var es la variable en este caso es el color price, Y EL 50% significa la cantidad de color que ocupara el color price que en este caso es la mitad de la pagina, (#fff 50% Y ESTA OTRA PARTE ES LA OTRA MITAD QUE OCUPARA DE COLOR BLANCO*/
+    flex-wrap: wrap;    /*si un elemto ya no entra en el contenedor simplemente se desplaze hacia abajo*/
+}
+
+.card_item{            /*ESTO SON TODAS LAS CARDS*/
+   max-width: 350px;   /*este sera el maximo ancho que tendra cada card*/
+   width: 30%;          /*y este es el ancho predeterminado que le damos a las cards*/
+   box-shadow:0 0 5px rgba(0, 0, 0, .5); /*esto es el borde de las cards*/
+   text-align: center;   /*esto centra el contenido de las cards*/
+   padding: 40px 0;      /*esto es el espacio dentro de la card: arriba,abajo y a los costados*/
+   background: #fff;
+   border-radius: 10px;  /*borde de las cards*/
+}
+
+.card_item--active{          /*SEGUNDA CARD*/
+    background: #5175FF;    /*Esto es el fondo de la segunda card*/
+    --color-price:#fff;     /*Este color es del PRECIO*/
+    --color-features:#fff;  /*este color es de las CARACTERISTICAS(todas las p)cambiamos este color a blanco para que se pueda apreciar mejro*/
+    --color-boton:#26293A;  /*CON ESTO ARREGLAMOS EL BOTON DE LA SEGUNDA CARD QUE SOLO ESTABA EN BLANCO*/
+}
+
+.card_plan{                   /*Esto es nuestro h3 que contine las palabras:BASICO,INTERMEDIO Y PROFESIONAL*/
+    color: var(--color-price);  /*Y aqui le estamos poniendo nuestra variales --color-price que es  --color-price: #26293A;*/
+   margin-bottom: 20px;        /*Esto es el espacio entre las palabras del titulo y precio de cada card*/
+}
+
+
+.card_price{                  /*Esto es nuestros precios dentro de las cards*/
+    font-size: 3rem;          /*Esto es tamaño de las letras del precio de las cards*/
+    color: var(--color-price); /*Y aqui le estamos poniendo nuestra variales --color-price que es  --color-price: #26293A;*/
+}
+
+
+.card_features{                /*Estas son las caracteristicas de las cards (son todos los elemntos p)*/
+    color: var(--color-features); /*Y aqui le estamos poniendo nuestra variales --color-features que es --color-features:#9c9191;*/
+    margin-bottom: 25px;         /*Esto es el espacio que tiene abajo en las caracteristicas(todas las p)*/
+}
+
+
+.card_features--margin{      /*ESTO ES EL PLAN DE CADA CARD QUE ESTA ABAJO DEL PRECIO*/
+    margin: 30px 0 50px;     /*Esto es el espacio entre el plan de arriba y abajo*/
+}
+
+
+.card_features:nth-last-of-type(1){   /*ESTO LE DA UN ESPACIO HACIA ABAJO AL ULTIMO ELEMENTO CARD_FEATURES*/
+    margin-bottom: 50px;
+}
+
+
+.card_cta{
+    display: inline-block;          
+    background: var(--color-price);
+    color: var(--color-boton);
+    width: 190px;
+    text-align: center;
+    padding: 20px 0;
+    text-decoration: none;
+    border-radius: 40px;
+}
+
+@media screen and (max-width:800px){  /*CON ESTO INDICAMOS QUE SI EL DISPOSITIVO MOBIL TIENE MENOS DE 800PX SE VA A CUMPLIR LAS SIGUIENTES COSAS*/
+    .card{
+        background: #fff;          /*ESTO RECETEA EL LINEAR-GRADIENTE Y PONDRA EL BACKGROUND EN BLANCO*/
+    }
+
+    .card_item{                      /*CON ESTO INDICAMOS QUE SI EL MOBIL TIENE MENOS DE 800PX TENDRA LOS SIGUIENTES VALORES*/
+        width: 45%;
+        margin: 40px 0;
+    }
+}
+
+@media screen and (max-width:500px){
+    .card_item{
+        width: 90%;
+    }
+}
